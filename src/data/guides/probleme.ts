@@ -1,0 +1,116 @@
+import type { Guide } from "@/types";
+import { ALLE_SERIEN, ONE_UI_6_BIS_8, PRUEFDATUM, illustration } from "./shared";
+
+export const probleme: Guide[] = [
+  {
+    id: "speicher-voll",
+    slug: "speicher-voll",
+    titel: "Speicher voll – Platz schaffen",
+    beschreibung: "Ihr Handy meldet, dass der Speicher voll ist? So sehen Sie, was Platz belegt, und schaffen wieder Raum.",
+    kategorie: "probleme-loesen",
+    keywords: ["speicher", "speicher voll", "speicherplatz", "kein platz", "aufräumen"],
+    synonyme: ["voll", "speicher frei machen", "platz schaffen", "zu wenig speicher", "speicherplatz voll"],
+    probleme: ["Handy sagt Speicher voll", "Ich kann keine Fotos mehr machen", "Apps lassen sich nicht installieren"],
+    schwierigkeit: "mittel",
+    dauerMinuten: 10,
+    geraeteSerien: ALLE_SERIEN,
+    oneUiVersionen: ONE_UI_6_BIS_8,
+    bilder: [
+      illustration(
+        "speicher-voll",
+        "speicher.svg",
+        "Illustration: Balken zur Speicherbelegung",
+        "Vereinfachte Zeichnung eines Balkens, der zeigt, wie viel Speicher durch Bilder, Videos, Apps und Sonstiges belegt ist.",
+      ),
+    ],
+    schritte: [
+      { titel: "Einstellungen öffnen", text: "Tippen Sie auf die App „Einstellungen“." },
+      {
+        titel: "Gerätewartung öffnen",
+        text: "Tippen Sie auf „Gerätewartung“. Bei manchen Geräten mit One UI 6 heißt der Punkt „Akku und Gerätewartung“.",
+      },
+      { titel: "Speicher ansehen", text: "Tippen Sie auf „Speicher“. Sie sehen, wie viel Platz Bilder, Videos, Apps und andere Dateien belegen.", bild: 0 },
+      {
+        titel: "Aufräumen",
+        text: "Tippen Sie auf einen Bereich, zum Beispiel „Videos“ oder „Apps“, und löschen Sie, was Sie nicht mehr brauchen. Videos belegen meist am meisten Platz.",
+      },
+      { titel: "Papierkorb leeren", text: "Gelöschte Bilder landen zunächst im Papierkorb der Galerie. Leeren Sie ihn, damit der Platz wirklich frei wird." },
+    ],
+    tipps: [
+      "Große Videos aus WhatsApp-Gruppen sind oft die größten Platzfresser.",
+      "Sichern Sie wichtige Fotos vorher, zum Beispiel in Google Fotos oder auf einem Computer.",
+    ],
+    warnhinweise: ["Gelöschte Dateien lassen sich nach dem Leeren des Papierkorbs nicht wiederherstellen."],
+    pruefdatum: PRUEFDATUM,
+    beliebt: true,
+  },
+  {
+    id: "handy-reagiert-nicht",
+    slug: "handy-reagiert-nicht",
+    titel: "Handy reagiert nicht mehr",
+    beschreibung: "Der Bildschirm ist eingefroren und nichts geht mehr? Mit einem erzwungenen Neustart hilft man sich meist schnell.",
+    kategorie: "probleme-loesen",
+    keywords: ["hängt", "eingefroren", "reagiert nicht", "neustart erzwingen", "abgestürzt"],
+    synonyme: ["geht nichts mehr", "bildschirm reagiert nicht", "aufgehängt", "friert ein", "stürzt ab"],
+    probleme: ["Handy hängt", "Bildschirm ist eingefroren", "Nichts reagiert mehr"],
+    schwierigkeit: "leicht",
+    dauerMinuten: 2,
+    geraeteSerien: ALLE_SERIEN,
+    oneUiVersionen: ONE_UI_6_BIS_8,
+    bilder: [
+      illustration(
+        "handy-reagiert-nicht",
+        "tasten-halten.svg",
+        "Illustration: Seitentaste und Leiser-Taste lange gedrückt halten",
+        "Schematische Zeichnung eines Handys mit markierter Seitentaste und Leiser-Taste. Beide werden mehr als sieben Sekunden gedrückt gehalten.",
+      ),
+    ],
+    schritte: [
+      { titel: "Ruhe bewahren", text: "Ihre Daten bleiben bei einem Neustart erhalten. Sie machen nichts kaputt." },
+      {
+        titel: "Tasten lange drücken",
+        text: "Halten Sie die Seitentaste und die Leiser-Taste gleichzeitig gedrückt – mindestens sieben Sekunden lang, bis der Bildschirm schwarz wird.",
+        bild: 0,
+      },
+      { titel: "Loslassen", text: "Sobald das Samsung-Logo erscheint, lassen Sie beide Tasten los. Das Handy startet neu." },
+      { titel: "PIN eingeben", text: "Geben Sie nach dem Start Ihre PIN ein. Danach sollte alles wieder funktionieren." },
+    ],
+    tipps: ["Passiert das häufig, prüfen Sie, ob der Speicher voll ist und ob ein Software-Update bereitsteht."],
+    warnhinweise: ["Ist der Akku leer, reagiert das Handy ebenfalls nicht. Schließen Sie es dann zuerst eine halbe Stunde ans Ladegerät an."],
+    pruefdatum: PRUEFDATUM,
+  },
+  {
+    id: "bildschirm-dreht-nicht",
+    slug: "bildschirm-dreht-sich-nicht",
+    titel: "Bildschirm dreht sich nicht (oder zu oft)",
+    beschreibung: "Das Bild dreht sich nicht mit, wenn Sie das Handy quer halten – oder es dreht sich ständig? So stellen Sie es ein.",
+    kategorie: "probleme-loesen",
+    keywords: ["drehen", "automatisch drehen", "querformat", "hochformat", "bildschirm drehen"],
+    synonyme: ["dreht nicht", "bild quer", "bild dreht sich", "rotation", "kippen"],
+    probleme: ["Bildschirm dreht sich nicht", "Video nicht im Querformat", "Bild dreht sich ständig"],
+    schwierigkeit: "leicht",
+    dauerMinuten: 1,
+    geraeteSerien: ALLE_SERIEN,
+    oneUiVersionen: ONE_UI_6_BIS_8,
+    bilder: [
+      illustration(
+        "bildschirm-dreht-sich-nicht",
+        "drehen.svg",
+        "Illustration: Symbol für automatisches Drehen im Schnellzugriff",
+        "Vereinfachte Zeichnung des Schnellzugriffs mit einem Symbol, das ein Handy mit kreisförmigen Pfeilen zeigt.",
+      ),
+    ],
+    schritte: [
+      { titel: "Schnellzugriff öffnen", text: "Wischen Sie vom oberen Bildschirmrand zweimal nach unten." },
+      {
+        titel: "Drehen-Symbol finden",
+        text: "Suchen Sie das Symbol „Automatisch drehen“. Ist das Drehen ausgeschaltet, heißt das Symbol meist „Hochformat“ oder „Querformat“.",
+        bild: 0,
+      },
+      { titel: "Antippen", text: "Tippen Sie einmal darauf. Ist es farbig und heißt „Automatisch drehen“, dreht sich das Bild mit dem Handy mit." },
+    ],
+    tipps: ["Der Startbildschirm dreht sich bei vielen Geräten grundsätzlich nicht – probieren Sie es in einer App wie der Galerie."],
+    warnhinweise: [],
+    pruefdatum: PRUEFDATUM,
+  },
+];
